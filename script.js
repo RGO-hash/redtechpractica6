@@ -222,7 +222,7 @@ function showCurrentPage(name, link) {
     switch(link) {
         case '/inicio':
             content = `
-                <h3>Bienvenido a TechShop</h3>
+                <h3>Bienvenido a RedTech</h3>
                 <p>Tu tienda de confianza para computadoras y software de alta calidad.</p>
                 <div class="product-grid">
                     <div class="product-card">
