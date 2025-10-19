@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Venta de Computadoras y Software</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">💻</div>
+                <div class="logo-text">
+                    <h1>TechShop</h1>
+                    <p>Venta de Computadoras y Software</p>
+                </div>
+            </div>
+            <div class="header-info">
+                <p>📞 (829) 533-4418</p>
+                <p>✉️ info@redtech.com</p>
+            </div>
+        </header>
+        
+        <div class="content">
+            <section class="menu-section">
+                <h2>Menú de Navegación</h2>
+                <div class="menu-actions">
+                    <button class="menu-toggle" id="menuToggle">Mostrar/Ocultar Menú</button>
+                    <button class="btn-secondary" id="resetMenu">Restaurar Menú Original</button>
+                </div>
+                <nav id="menuContainer">
+                    <!-- El menú se generará dinámicamente aquí -->
+                </nav>
+                
+                <div class="current-page" id="currentPage">
+                    <h3>Bienvenido a Redtech</h3>
+                    <p>Selecciona una opción del menú para explorar nuestros productos y servicios.</p>
+                </div>
+            </section>
+            
+            <section class="form-section">
+                <h2>Gestión del Menú</h2>
+                <div class="highlight">
+                    <p><strong>Nota:</strong> Puedes personalizar completamente el menú agregando, editando o eliminando opciones.</p>
+                </div>
+                <form id="menuForm">
+                    <div class="form-group">
+                        <label for="itemId">ID (único):</label>
+                        <input type="number" id="itemId" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="itemName">Nombre:</label>
+                        <input type="text" id="itemName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="itemLink">Enlace:</label>
+                        <input type="text" id="itemLink" placeholder="/ruta" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parentItem">Menú padre:</label>
+                        <select id="parentItem">
+                            <option value="">-- Menú principal --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="actions">
+                        <button type="submit" id="addBtn">Agregar Opción</button>
+                        <button type="button" id="updateBtn" style="display:none;">Actualizar Opción</button>
+                        <button type="button" id="cancelBtn" style="display:none;" class="btn-danger">Cancelar</button>
+                    </div>
+                </form>
+                
+                <div class="form-group" style="margin-top: 20px;">
+                    <h3>Opciones del Menú</h3>
+                    <div id="menuItemsList">
+                        <!-- Lista de opciones del menú -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
